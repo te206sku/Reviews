@@ -233,6 +233,70 @@ body {
     font-size: 18px;
 }
 
+/* Стили модального окна  */
+.modal {
+    position: fixed; /*фиксируем положение окна*/
+    left: 0; /* Растягиваем на весь экран (привязываем к верхнему левому углу) */
+    top: 0;
+    width: 100%;
+    height: 100vh; /* vh - viewport height (высота видимой области) */
+    z-index: 99998; /*делаем его поверх других окон*/
+    background-color: rgba(0, 0, 0, .3); /*за окном образуется тень*/
+    display: grid; /* Используем CSS Grid для центрирования содержимого модалки */
+    align-items: center; /* Вертикальное центрирование содержимого */
+    justify-content: center; /* Горизонтальное центрирование содержимого */
+    overflow-y: auto; /* Добавляем вертикальный скролл если содержимое не помещается */
+    visibility: hidden; /* Скрываем модалку изначально (но она остается в DOM) */
+    opacity: 0; /* Делаем полностью прозрачной (невидимой) */
+    transition: opacity .4s, visibility .4s; /* Плавные анимации для появления/исчезновения */
+}
+
+.modal__box {
+    position: relative;
+    max-width: 500px;
+    padding: 45px;
+    z-index: 1;
+    margin: 30px 15px;
+    font-size: 15px;
+    background-color: white;
+    box-shadow: 0px 0px 17px -7px rgba(34, 60, 80, 0.2);
+    transform: scale(0); /*схлопывание при закрытии*/
+    transition: transform .8s;
+}
+
+.modal__close-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    border: none;
+    background-color: transparent; /*цвет фона = цвет родителя*/
+    padding: 5px;
+    cursor: pointer;
+}
+
+.modal__close-btn svg path {
+    transition: fill .4s; /*аниация изменения цвета*/
+}
+
+/* Изменение цвета крестика при наведении */
+.modal__close-btn:hover svg path {
+    fill: blue;
+}
+
+/* Изменение цвета крестика принажатии  */
+.modal__close-btn:active svg path {
+    fill: rgb(186, 53, 0);
+}
+
+.modal.open {
+    visibility: visible;
+    opacity: 1;
+}
+
+.modal.open .modal__box {
+    transform: scale(1);
+}
+
 .face__contacts {
     display: flex;
     gap: 88px;
