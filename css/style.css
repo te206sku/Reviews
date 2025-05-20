@@ -165,11 +165,79 @@ body {
 .navbar__item-bold {
     font-weight: 600; /* Полужирный текст */
     font-size: 18px;
+
+    &:hover {
+        color: #9c0e0e;
+    }
+
+    &:focus {
+        color: #0f229b;
+    }
+}
+
+/* Подчеркивание */
+.navbar__item-bold {
+    position: relative;
+}
+
+.navbar__item-bold::after {
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: -5px;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #000;
+}
+
+/* Анимация слева */
+.navbar__item-bold::after {
+    width: 0;
+    transition: 0.3s;
+}
+
+.navbar__item-bold:hover:after {
+    width: 100%;
 }
 
 .navbar__item {
     font-size: 18px;
     opacity: 70%; /* Полупрозрачность */
+
+    &:hover {
+        color: #9c0e0e;
+    }
+
+    &:focus {
+        color: #0f229b;
+    }
+}
+
+/* Подчеркивание */
+.navbar__item {
+    position: relative;
+}
+
+.navbar__item::after {
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: -5px;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #000;
+}
+
+/* Анимация слева */
+.navbar__item::after {
+    width: 0;
+    transition: 0.3s;
+}
+
+.navbar__item:hover:after {
+    width: 100%;
 }
 
 .login {
@@ -181,6 +249,14 @@ body {
 .login__link {
     font-size: 18px;
     color: #fafbff;
+
+    &:hover {
+        color: #9c0e0e;
+    }
+
+    &:focus {
+        color: #7f9b0f;
+    }
 }
 
 .btn {
@@ -188,6 +264,14 @@ body {
     font-size: 16px;
     background-color: #41f5c0;
     border-radius: 9px;
+}
+
+.btn:hover {
+    background-color: #a8e7d4;
+}
+
+.btn:focus {
+    background-color: #07966b;
 }
 
 .header__line {
@@ -231,6 +315,14 @@ body {
     align-items: center;
     margin-top: 40px;
     font-size: 18px;
+}
+
+.face__link:hover {
+    color: #9c0e0e;
+}
+
+.face__link:focus {
+    color: #0f229b;
 }
 
 /* Стили модального окна  */
@@ -416,6 +508,10 @@ body {
     margin-top: 50px;
     background-color: #0c1523;
     color: #fafbff;
+
+    &:hover {
+        background-color: #22640a;
+    }
 }
 
 .talent__item {
@@ -547,6 +643,10 @@ body {
 .starting__btn {
     background-color: #0c1523;
     color: #fafbff;
+
+    &:hover {
+        background-color: #0f229b;
+    }
 }
 
 .review {
@@ -643,6 +743,31 @@ body {
     gap: 50px;
 }
 
+.contacts__img>a {
+    position: relative;
+}
+
+.contacts__img>a::after {
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: #000;
+}
+
+/* Анимация слева */
+.contacts__img>a::after {
+    width: 0;
+    transition: 0.3s;
+}
+
+.contacts__img>a:hover:after {
+    width: 100%;
+}
+
 .footer {
     padding: 26px 0 26px;
     background-color: #41f5c0;
@@ -680,14 +805,23 @@ body {
         align-items: center;
     }
 
+    .talent__item {
+        width: 100%;
+    }
+
     .marketplace__table {
         grid-template-columns: 1fr 1fr; /* 3 → 2 колонки */
+    }
+
+    .table__item {
+        width: 100%;
+        align-items: center;
     }
 }
 
 @media (max-width: 992px) {
-    .container {
-        max-width: 720px;
+    .header__btn {
+        width: 100%;
     }
 
     .header__container {
@@ -723,7 +857,9 @@ body {
 
 @media (max-width: 768px) {
     .header__container {
-        gap: 1px;
+        width: 100%;
+        gap: 10%;
+        justify-content: space-between;
     }
 
     .face__title {
@@ -745,6 +881,11 @@ body {
 }
 
 @media (max-width: 576px) {
+
+    .backg__ellipse {
+        left: 0;
+    }
+
     .container {
         padding: 0 var(--container-padding);
     }
@@ -753,6 +894,7 @@ body {
         flex-direction: column;
         gap: 10px;
         text-align: center;
+        /* margin: 0; */
     }
 
     .face__title {
@@ -765,6 +907,7 @@ body {
 
     .face__contacts {
         flex-direction: column;
+        width: 50%;
     }
 
     .check__box {
@@ -786,6 +929,13 @@ body {
         flex-direction: column;
         gap: 20px;
         align-items: center;
+    }
+}
+
+@media (max-width: 467px){
+    .header__container {
+        flex-direction: column;
+        gap: 20px;
     }
 }
 
