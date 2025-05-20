@@ -1,0 +1,771 @@
+:root {
+    --container-padding: 15px;
+    --gap-small: 15px;
+    --gap-medium: 30px;
+    --gap-large: 50px;
+}
+
+/* ===== Глобальные стили ===== */
+html {
+    scroll-behavior: smooth; /* Плавная прокрутка при навигации по якорям */
+}
+
+/* Сброс стандартных отступов для ссылок */
+a {
+    display: inline-block
+}
+
+/* Основные настройки шрифта и цвета */
+body {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500; /* Средняя толщина шрифта */
+    color: #0c1523; /* Основной цвет текста */
+}
+
+/* Обертка */
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Минимальная высота = высота viewport */
+    overflow: hidden;  /* Скрытие горизонтального скролла */
+}
+
+/* Контейнер с ограничением максимальной ширины */
+.container {
+    max-width: 1160px; /* Фиксированная ширина контейнера */
+    padding: 0 10px; /* Горизонтальные отступы */
+    margin: 0 auto; /* Центрирование */
+}
+
+/* ===== Фоновые элементы ===== */
+.backg__img {
+    position: relative;
+    z-index: -100; /* Отправляем на задний план */
+}
+
+/* Декоративный эллипс */
+.backg__ellipse {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+/* Звезды с индивидуальным позиционированием */
+.backg__star1 {
+    position: absolute;
+    top: 122px;
+    left: 339px;
+    width: 26px;
+    height: 24px;
+    opacity: 30%;/* Полупрозрачность */
+
+}
+
+.backg__star2 {
+    position: absolute;
+    top: 431px;
+    left: 45px;
+    width: 26px;
+    height: 24px;
+    opacity: 30%;
+
+}
+
+.backg__star3 {
+    position: absolute;
+    top: 644px;
+    left: 362px;
+    width: 24px;
+    height: 22px;
+    opacity: 30%;
+
+}
+
+.backg__star4 {
+    position: absolute;
+    top: 661px;
+    left: 71px;
+    width: 51px;
+    height: 47px;
+    opacity: 30%;
+
+}
+
+.backg__star5 {
+    position: absolute;
+    top: 101px;
+    left: 45px;
+    width: 26px;
+    height: 24px;
+    opacity: 30%;
+
+}
+
+.backg__star6 {
+    position: absolute;
+    top: 205px;
+    left: 99px;
+    width: 26px;
+    height: 24px;
+    opacity: 30%;
+
+}
+
+.backg__star7 {
+    position: absolute;
+    top: 798px;
+    left: 234px;
+    width: 51px;
+    height: 47px;
+    opacity: 30%;
+
+}
+
+.backg__star8 {
+    position: absolute;
+    top: 888px;
+    left: 376px;
+    width: 102px;
+    height: 94px;
+    opacity: 30%;
+
+}
+
+.backg__star9 {
+    position: absolute;
+    top: 768px;
+    left: 592px;
+    width: 116px;
+    height: 107px;
+    opacity: 30%;
+}
+
+/* ===== Шапка сайта ===== */
+.header {
+    margin-top: 22px;/* Отступ сверху */
+}
+
+.header__container {
+    display: flex;
+    align-items: center; /* Вертикальное выравнивание */
+    gap: 115px; /* Расстояние между элементами */
+}
+
+/* Навигационное меню */
+.navbar {
+    margin-right: 400px; /* Отступ справа */
+}
+
+.navbar__list {
+    display: flex;
+    gap: 34px; /* Расстояние между пунктами */
+}
+
+/* Стили для пунктов меню */
+.navbar__item-bold {
+    font-weight: 600; /* Полужирный текст */
+    font-size: 18px;
+}
+
+.navbar__item {
+    font-size: 18px;
+    opacity: 70%; /* Полупрозрачность */
+}
+
+.login {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+
+.login__link {
+    font-size: 18px;
+    color: #fafbff;
+}
+
+.btn {
+    padding: 15px 25px;
+    font-size: 16px;
+    background-color: #41f5c0;
+    border-radius: 9px;
+}
+
+.header__line {
+    position: relative;
+    z-index: -101;
+    width: 100%;
+    height: 1px;
+    margin-top: 20px;
+    background-color: #0c1523;
+    opacity: 10%;
+}
+
+.main {
+    margin-top: 101px;
+}
+
+.face__subtitle {
+    line-height: 150.5%;
+    font-weight: 300;
+    font-size: 42.54px;
+    opacity: 90%;
+}
+
+/* ===== Главный баннер ===== */
+.face__title {
+    font-size: 75.59px;/* Крупный размер */
+    font-weight: 600;
+    margin-top: 5px; /* Отступ сверху */
+}
+
+.face__description {
+    margin-top: 40px;
+    font-size: 23.94px;
+    line-height: 150%; /* Межстрочный интервал */
+    opacity: 70%;
+}
+
+.face__links {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    margin-top: 40px;
+    font-size: 18px;
+}
+
+.face__contacts {
+    display: flex;
+    gap: 88px;
+    margin-top: 159px;
+}
+
+.contacts__left {
+    display: flex;
+    flex-direction: column;
+    gap: 41px;
+}
+
+.contacts__right {
+    display: flex;
+    flex-direction: column;
+    gap: 41px;
+}
+
+.face__images {
+    position: relative;
+}
+
+.people {
+    position: absolute;
+    top: 527px;
+    right: 238px;
+}
+
+.twitter {
+    position: absolute;
+    top: 139px;
+    right: 235px;
+}
+
+.snapchat {
+    position: absolute;
+    top: 288px;
+    right: 159px;
+    display: inline-block
+}
+
+.facebook {
+    position: absolute;
+    top: 247px;
+    right: 758px;
+    display: inline-block
+}
+
+.instagram {
+    position: absolute;
+    top: 697px;
+    right: 276px;
+    display: inline-block
+}
+
+.check {
+    margin-top: 130px;
+}
+
+.check__title {
+    text-align: center;
+    font-weight: 600;
+    font-size: 42.54px;
+}
+
+.check__box {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 75px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 835px;
+    text-align: center;
+}
+
+.check__number {
+    font-size: 31.91px;
+}
+
+.check__description {
+    margin-top: 10px;
+    font-size: 13.33px;
+    line-height: 150%;
+}
+
+.talent {
+    margin-top: 155px;
+}
+
+/* ===== Блок "Talent" ===== */
+.talent__container {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Расстояние между колонками */
+    padding: 110px 0 120px; /* Внутренние отступы */
+    background-color: #fafbff; /* Светлый фон */
+}
+
+.talent__left {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.left__text {
+    margin-top: 27px;
+    margin-bottom: auto;
+    padding-left: 45px;
+}
+
+.left__title {
+    font-weight: 600;
+    font-size: 42.54px;
+}
+
+.left__btn {
+    margin-top: 50px;
+    background-color: #0c1523;
+    color: #fafbff;
+}
+
+.talent__item {
+    position: relative;
+    height: 260px;
+    padding: 50px 83px 50px 53px;
+    width: 458px;
+    border-radius: 15px; /* Закругленные углы */
+    background-color: #fff;
+}
+
+.talent__icon {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 11px;
+    border-radius: 5px;
+    background-color: #41f5bf2e;
+}
+
+.item__title {
+    margin-top: 15px;
+    font-size: 23.94px;
+    line-height: 150%;
+}
+
+.item__description {
+    margin-top: 15px;
+    font-size: 18px;
+    line-height: 150%;
+    font-weight: 300;
+    opacity: 70%;
+}
+
+/* Декоративная линия в карточках */
+.talent__line {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, #41f5bf14, #41F5C0, #41f5bf1c);
+}
+
+.talent__right {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.marketplace {
+    margin-top: 120px;
+}
+
+.marketplace__title {
+    font-size: 42.54px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.marketplace__description {
+    margin-top: 40px;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 150%;
+    text-align: center;
+    opacity: 70%;
+
+}
+
+.marketplace__table {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 60px;
+}
+
+.table__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 89px 50px;
+    width: 380px;
+    height: 363px;
+}
+
+.table__item:nth-child(odd) {
+    background-color: #baadc00c;
+}
+
+.marketplace__icon {
+    display: inline;
+    padding: 21px;
+    border-radius: 6px;
+    background-color: #26395910;
+}
+
+.table__title {
+    margin-top: 30px;
+    font-size: 31.91px;
+    text-align: center;
+}
+
+.table__description {
+    margin-top: 20px;
+    font-size: 18px;
+    line-height: 150%;
+    opacity: 70%;
+}
+
+.starting {
+    display: flex;
+    align-items: center;
+    gap: 353px;
+    margin-top: 140px;
+    margin-bottom: 130px;
+}
+
+.starting__title {
+    font-size: 31.91px;
+}
+
+.starting__description {
+    margin-top: 15px;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 160%;
+    opacity: 70%;
+}
+
+.starting__btn {
+    background-color: #0c1523;
+    color: #fafbff;
+}
+
+.review {
+    background-color: #fafbff;
+    padding-top: 130px;
+    padding-bottom: 120px;
+}
+
+.review__title {
+    text-align: center;
+    font-size: 42.54px;
+    font-weight: 600;
+}
+
+.review__description {
+    margin-top: 40px;
+    text-align: center;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 150%;
+    opacity: 70%;
+}
+
+.review__list {
+    display: flex;
+    gap: 30px;
+    margin-top: 61px;
+}
+
+.review__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 35px 42px 40px 42px;
+    border: 1px solid #41f5bf32;
+    border-radius: 20px;
+    background-color: #fff;
+}
+
+.star {
+    display: flex;
+    gap: 10px;
+    padding: 11px 15px 12px 15px;
+    border: 1px solid #ffd466;
+    border-radius: 13px;
+}
+
+.grade {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 150%;
+    color: #ffd466;
+}
+
+.reviews {
+    margin-top: 56px;
+    text-align: center;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 160%;
+    opacity: 70%;
+}
+
+.photo {
+    margin-top: 55px;
+}
+
+.name {
+    margin-top: 12px;
+    font-size: 18px;
+    line-height: 150%;
+}
+
+.profession {
+    margin-top: 10px;
+    line-height: 150%;
+    opacity: 70%;
+}
+
+.contacts {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 70px;
+    margin-bottom: 41px;
+}
+
+.contact__email {
+    font-size: 23.94px;
+    line-height: 150%;
+}
+
+.contacts__img {
+    display: flex;
+    gap: 50px;
+}
+
+.footer {
+    padding: 26px 0 26px;
+    background-color: #41f5c0;
+}
+
+.footer__container {
+    display: flex;
+    gap: 15px;
+    justify-content: center
+}
+
+.footer__text {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 150%;
+}
+
+
+@media (max-width: 1200px) {
+    
+    .btn {
+        width: 50%;
+    }
+
+    .header__container {
+        justify-content: space-between;
+    }
+
+    .navbar {
+        margin-right: 100px;
+    }
+
+    .talent__container {
+        flex-direction: column; /* Колонки → вертикальный стек */
+        align-items: center;
+    }
+
+    .marketplace__table {
+        grid-template-columns: 1fr 1fr; /* 3 → 2 колонки */
+    }
+}
+
+@media (max-width: 992px) {
+    .container {
+        max-width: 720px;
+    }
+
+    .header__container {
+        justify-content: space-between;
+    }
+
+    .navbar {
+        margin-right: 0;
+        order: 3;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .face__content {
+        flex-direction: column;
+    }
+
+    .face__contacts {
+        margin-top: 60px;
+    }
+
+    .check__box {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .starting {
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .header__container {
+        gap: 1px;
+    }
+
+    .face__title {
+        font-size: 48px;
+    }
+
+    .face__description {
+        font-size: 18px;
+    }
+
+    .talent__item {
+        width: 100%;
+        padding: 30px;
+    }
+
+    .review__list {
+        flex-direction: column; /* Горизонтальные → вертикальные карточки */
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        padding: 0 var(--container-padding);
+    }
+
+    .navbar__list {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .face__title {
+        font-size: 36px;
+    }
+
+    .face__subtitle {
+        font-size: 28px;
+    }
+
+    .face__contacts {
+        flex-direction: column;
+    }
+
+    .check__box {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .marketplace__table {
+        grid-template-columns: 1fr;
+    }
+
+    .table__item {
+        width: 100%; /* Фиксированная → резиновая ширина */
+        height: auto; /* Фиксированная → автоматическая высота */
+        padding: 40px 20px;
+    }
+
+    .contacts {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+}
+
+/* Оптимизация для очень больших экранов */
+@media (min-width: 2000px) {
+    .container {
+        max-width: 1800px;
+    }
+
+    .face__title {
+        font-size: 90px;
+    }
+}
+
+/* Адаптация линии в talent__item */
+.talent__line {
+    height: 3px;
+    background: linear-gradient(90deg, rgba(65, 245, 192, 0.08), #41F5C0, rgba(65, 245, 192, 0.08));
+    transition: all 0.3s ease;
+}
+
+/* Адаптация фоновых элементов */
+@media (max-width: 1200px) {
+    .backg__ellipse {
+        opacity: 0.5;
+    }
+
+    .backg__star1,
+    .backg__star2,
+    .backg__star3,
+    .backg__star4,
+    .backg__star5,
+    .backg__star6,
+    .backg__star7,
+    .backg__star8,
+    .backg__star9 {
+        display: none;
+    }
+
+    .twitter,
+    .snapchat,
+    .facebook,
+    .instagram,
+    .people {
+        display: none;
+    }
+}
